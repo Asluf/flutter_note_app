@@ -50,7 +50,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Notes'),
+        title: const Text('My Notes'),
       ),
       body: ListView.builder(
         itemCount: _notes.length,
@@ -70,11 +70,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.edit),
+                    icon: const Icon(Icons.edit),
                     onPressed: () => _editNote(note),
                   ),
                   IconButton(
-                    icon: Icon(Icons.delete),
+                    icon: const Icon(Icons.delete),
                     onPressed: () => _deleteNote(note['_id']),
                   ),
                 ],
@@ -85,7 +85,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _createNote,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

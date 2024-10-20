@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Note Manager',
-      theme: forestGreenTheme, // Light theme
-      darkTheme: darkModeTheme, // Dark theme
+      debugShowCheckedModeBanner: false,
+      theme: sunnyCitrusTheme,
+      darkTheme: darkModeTheme,
       themeMode: ThemeMode.system,
       home: const DashboardScreen(),
     );
