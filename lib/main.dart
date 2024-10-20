@@ -9,12 +9,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Note Manager',
-      theme: lavenderDreamTheme, // Light theme
+      theme: forestGreenTheme, // Light theme
       darkTheme: darkModeTheme, // Dark theme
       themeMode: ThemeMode.system,
       home: const DashboardScreen(),
