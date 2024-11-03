@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note_app/screens/DashboardScreen.dart';
-import 'themes.dart';
+import 'themes/themes.dart';
 
 void main() {
   runApp(const MyApp());
