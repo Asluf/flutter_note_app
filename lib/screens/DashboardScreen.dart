@@ -41,7 +41,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   void _createNote() async {
     await Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => NoteForm()),
+      MaterialPageRoute(builder: (context) => const NoteForm()),
     );
     _refreshNotes();
   }

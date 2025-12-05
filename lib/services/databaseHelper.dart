@@ -2,14 +2,14 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DatabaseHelper {
-  static final _databaseName = "notes.db";
-  static final _databaseVersion = 1;
-  static final table = 'note_table';
+  static const _databaseName = "notes.db";
+  static const _databaseVersion = 1;
+  static const table = 'note_table';
 
-  static final columnId = '_id';
-  static final columnTitle = 'title';
-  static final columnDescription = 'description';
-  static final columnUpdatedTime = 'updated_time';
+  static const columnId = '_id';
+  static const columnTitle = 'title';
+  static const columnDescription = 'description';
+  static const columnUpdatedTime = 'updated_time';
 
   // Singleton pattern
   DatabaseHelper._privateConstructor();
@@ -24,7 +24,8 @@ class DatabaseHelper {
 
   _initDatabase() async {
     String path = join(await getDatabasesPath(), _databaseName);
-    return await openDatabase(path, version: _databaseVersion, onCreate: _onCreate);
+    return await openDatabase(path,
+        version: _databaseVersion, onCreate: _onCreate);
   }
 
   Future _onCreate(Database db, int version) async {
